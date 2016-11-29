@@ -7,14 +7,14 @@ import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
-output_filename = 'combined.csv'
-trendline_both_output_filename = 'trendline_both.png'
-trendline_north_output_filename = 'trendline_north.png'
-trendline_south_output_filename = 'trendline_south.png'
-input_north_filename = 'NH_seaice_extent_final_v2.csv'
-input_north_2016_filename = 'NH_seaice_extent_nrt_v2.csv'
-input_south_filename = 'SH_seaice_extent_final_v2.csv'
-input_south_2016_filename = 'SH_seaice_extent_nrt_v2.csv'
+output_filename = 'output/combined.csv'
+trendline_both_output_filename = 'output/trendline_both.png'
+trendline_north_output_filename = 'output/trendline_north.png'
+trendline_south_output_filename = 'output/trendline_south.png'
+input_north_filename = 'data/NH_seaice_extent_final_v2.csv'
+input_north_2016_filename = 'data/NH_seaice_extent_nrt_v2.csv'
+input_south_filename = 'data/SH_seaice_extent_final_v2.csv'
+input_south_2016_filename = 'data/SH_seaice_extent_nrt_v2.csv'
 
 data = {}
 list_of_years = []
