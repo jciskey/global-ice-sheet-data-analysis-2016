@@ -20,7 +20,7 @@ The most recent version of the dataset files can be found on the University of C
 ftp://sidads.colorado.edu/DATASETS/NOAA/G02135/north/daily/data/
 ftp://sidads.colorado.edu/DATASETS/NOAA/G02135/south/daily/data/
 
-You should be able to copy the CSV dataset files with the matching names from the server and overwrite the ones provided here to generate graphs with updated data. The files provided here are **NOT** regularly updated, and users are highly encouraged to update the dataset files before generating new graphs.
+You should be able to copy the CSV dataset files with the matching names from the server and overwrite the ones provided here to generate graphs with updated data. The files provided here are **NOT** regularly updated, and users are highly encouraged to update to the dataset files from the SIDADS server before generating new graphs.
 
 ## Citation
 Fetterer, F., K. Knowles, W. Meier, and M. Savoie. 2016, updated daily. *Sea Ice Index, Version 2*. Boulder, Colorado USA. NSIDC: National Snow and Ice Data Center. doi: http://dx.doi.org/10.7265/N5736NV7. Accessed: 2016-11-28.
