@@ -131,7 +131,7 @@ monthsFmt = mdates.DateFormatter('%m')
 # Generate the combined ice coverage plot
 fig, ax = plt.subplots()
 
-ax.set_title('Global (North && South) Ice Coverage')
+ax.set_title('Global (North && South) Ice Extent')
 
 for y in list_of_years:
 	# Pull the aggregate data for the current year
@@ -179,7 +179,7 @@ plt.savefig(trendline_both_output_filename)
 # Generate the north ice coverage plot
 fig, ax = plt.subplots()
 
-ax.set_title('North Ice Coverage')
+ax.set_title('North Ice Extent')
 
 for y in list_of_years:
 	# Pull the aggregate data for the current year
@@ -227,7 +227,7 @@ plt.savefig(trendline_north_output_filename)
 # Generate the south ice coverage plot
 fig, ax = plt.subplots()
 
-ax.set_title('South Ice Coverage')
+ax.set_title('South Ice Extent')
 
 for y in list_of_years:
 	# Pull the aggregate data for the current year
