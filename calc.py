@@ -126,7 +126,9 @@ for date, data in ordered.items():
 
 # Setup the formatting for the axes
 months = mdates.MonthLocator()  # every month
-monthsFmt = mdates.DateFormatter('%m')
+monthsFmt = mdates.DateFormatter('%b')
+x_axis_label = 'Date of Measurement'
+y_axis_label = 'Ice Extent (10^6 sq km)'
 
 # Generate the combined ice coverage plot
 fig, ax = plt.subplots()
@@ -181,6 +183,10 @@ fig.autofmt_xdate()
 
 # Add a legend for the trendlines
 ax.legend(loc='best')
+
+# Add labels on the axes
+ax.set_xlabel(x_axis_label)
+ax.set_ylabel(y_axis_label)
 
 # Save the plot
 plt.savefig(trendline_both_output_filename)
@@ -240,6 +246,10 @@ fig.autofmt_xdate()
 # Add a legend for the trendlines
 ax.legend(loc='best')
 
+# Add labels on the axes
+ax.set_xlabel(x_axis_label)
+ax.set_ylabel(y_axis_label)
+
 # Save the plot
 plt.savefig(trendline_north_output_filename)
 
@@ -297,6 +307,10 @@ fig.autofmt_xdate()
 
 # Add a legend for the trendlines
 ax.legend(loc='best')
+
+# Add labels on the axes
+ax.set_xlabel(x_axis_label)
+ax.set_ylabel(y_axis_label)
 
 # Save the plot
 plt.savefig(trendline_south_output_filename)
