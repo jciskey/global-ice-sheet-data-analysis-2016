@@ -130,6 +130,12 @@ monthsFmt = mdates.DateFormatter('%b')
 x_axis_label = 'Date of Measurement'
 y_axis_label = 'Ice Extent (10^6 sq km)'
 
+# Format the trendline style
+trendline_style = 'solid'
+default_trendline_size = 1
+special_year_trendline_size = 3
+marker_style = None
+
 # Generate the combined ice coverage plot
 fig, ax = plt.subplots()
 
@@ -149,18 +155,22 @@ for y in list_of_years:
 	if y == '2016':
 		line_color = 'red'
 		legend_label = y
+		trendline_size = special_year_trendline_size
 	elif y == '2015':
-		line_color = 'green'
+		line_color = 'orange'
 		legend_label = y
+		trendline_size = special_year_trendline_size
 	elif y == '2014':
 		line_color = 'black'
 		legend_label = 'All Other Years'
+		trendline_size = default_trendline_size
 	else:
 		line_color = 'black'
 		legend_label = ''
+		trendline_size = default_trendline_size
 
 	# Plot the datapoints for the current year
-	ax.plot_date(dates_list, total_extent_list, color=line_color, label=legend_label)
+	ax.plot_date(dates_list, total_extent_list, color=line_color, linestyle=trendline_style, linewidth=trendline_size, marker=marker_style, label=legend_label)
 
 # Format the ticks
 ax.xaxis.set_major_locator(months)
@@ -211,18 +221,22 @@ for y in list_of_years:
 	if y == '2016':
 		line_color = 'red'
 		legend_label = y
+		trendline_size = special_year_trendline_size
 	elif y == '2015':
-		line_color = 'green'
+		line_color = 'orange'
 		legend_label = y
+		trendline_size = special_year_trendline_size
 	elif y == '2014':
 		line_color = 'black'
 		legend_label = 'All Other Years'
+		trendline_size = default_trendline_size
 	else:
 		line_color = 'black'
 		legend_label = ''
+		trendline_size = default_trendline_size
 
 	# Plot the datapoints for the current year
-	ax.plot_date(dates_list, north_extent_list, color=line_color, label=legend_label)
+	ax.plot_date(dates_list, north_extent_list, color=line_color, linestyle=trendline_style, linewidth=trendline_size, marker=marker_style, label=legend_label)
 
 # Format the ticks
 ax.xaxis.set_major_locator(months)
@@ -273,18 +287,22 @@ for y in list_of_years:
 	if y == '2016':
 		line_color = 'red'
 		legend_label = y
+		trendline_size = special_year_trendline_size
 	elif y == '2015':
-		line_color = 'green'
+		line_color = 'orange'
 		legend_label = y
+		trendline_size = special_year_trendline_size
 	elif y == '2014':
 		line_color = 'black'
 		legend_label = 'All Other Years'
+		trendline_size = default_trendline_size
 	else:
 		line_color = 'black'
 		legend_label = ''
+		trendline_size = default_trendline_size
 
 	# Plot the datapoints for the current year
-	ax.plot_date(dates_list, south_extent_list, color=line_color, label=legend_label)
+	ax.plot_date(dates_list, south_extent_list, color=line_color, linestyle=trendline_style, linewidth=trendline_size, marker=marker_style, label=legend_label)
 
 # Format the ticks
 ax.xaxis.set_major_locator(months)
