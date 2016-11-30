@@ -146,13 +146,19 @@ for y in list_of_years:
 	# Set the line color
 	if y == '2016':
 		line_color = 'red'
+		legend_label = y
 	elif y == '2015':
 		line_color = 'green'
+		legend_label = y
+	elif y == '2014':
+		line_color = 'black'
+		legend_label = 'All Other Years'
 	else:
 		line_color = 'black'
+		legend_label = ''
 
 	# Plot the datapoints for the current year
-	ax.plot_date(dates_list, total_extent_list, color=line_color, label=y)
+	ax.plot_date(dates_list, total_extent_list, color=line_color, label=legend_label)
 
 # Format the ticks
 ax.xaxis.set_major_locator(months)
@@ -173,6 +179,10 @@ ax.grid(True)
 # axes up to make room for them
 fig.autofmt_xdate()
 
+# Add a legend for the trendlines
+ax.legend(loc='best')
+
+# Save the plot
 plt.savefig(trendline_both_output_filename)
 
 
@@ -194,13 +204,19 @@ for y in list_of_years:
 	# Set the line color
 	if y == '2016':
 		line_color = 'red'
+		legend_label = y
 	elif y == '2015':
 		line_color = 'green'
+		legend_label = y
+	elif y == '2014':
+		line_color = 'black'
+		legend_label = 'All Other Years'
 	else:
 		line_color = 'black'
+		legend_label = ''
 
 	# Plot the datapoints for the current year
-	ax.plot_date(dates_list, north_extent_list, color=line_color, label=y)
+	ax.plot_date(dates_list, north_extent_list, color=line_color, label=legend_label)
 
 # Format the ticks
 ax.xaxis.set_major_locator(months)
@@ -221,6 +237,10 @@ ax.grid(True)
 # axes up to make room for them
 fig.autofmt_xdate()
 
+# Add a legend for the trendlines
+ax.legend(loc='best')
+
+# Save the plot
 plt.savefig(trendline_north_output_filename)
 
 
@@ -242,13 +262,19 @@ for y in list_of_years:
 	# Set the line color
 	if y == '2016':
 		line_color = 'red'
+		legend_label = y
 	elif y == '2015':
 		line_color = 'green'
+		legend_label = y
+	elif y == '2014':
+		line_color = 'black'
+		legend_label = 'All Other Years'
 	else:
 		line_color = 'black'
+		legend_label = ''
 
 	# Plot the datapoints for the current year
-	ax.plot_date(dates_list, south_extent_list, color=line_color, label=y)
+	ax.plot_date(dates_list, south_extent_list, color=line_color, label=legend_label)
 
 # Format the ticks
 ax.xaxis.set_major_locator(months)
@@ -269,4 +295,8 @@ ax.grid(True)
 # axes up to make room for them
 fig.autofmt_xdate()
 
+# Add a legend for the trendlines
+ax.legend(loc='best')
+
+# Save the plot
 plt.savefig(trendline_south_output_filename)
